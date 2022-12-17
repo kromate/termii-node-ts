@@ -2,7 +2,8 @@ export declare type SendMessageBody = {
   to: string;
   from: string;
   type: string;
-  channel: string;
+  sms: string;
+  channel: "dnd"| "generic" | "whatsapp";
     media: {
         url: string | null;
         caption: string | null;
@@ -10,7 +11,8 @@ export declare type SendMessageBody = {
 };
 export declare type SendMessageBulk = {
   to: string[];
-  from: string;
+    from: string;
+   sms: string;
   type: string;
   channel: string;
     media: {
